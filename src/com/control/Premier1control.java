@@ -28,6 +28,7 @@ public class Premier1control {
 	    @FXML
 	    void textfilaction(ActionEvent event) {
 System.out.println(st);
+System.out.println("bonjour".toString());
 	    }
 
 
