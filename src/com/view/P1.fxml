@@ -1,14 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="117.0" prefWidth="291.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.control.Premier1control">
-   <children>
-      <Button fx:id="button" layoutX="21.0" layoutY="46.0" mnemonicParsing="false" onAction="#buttonaction" text="Button" />
-      <TextField fx:id="textfil" layoutX="127.0" layoutY="24.0" onAction="#textfilaction" prefHeight="47.0" prefWidth="149.0" />
-      <Label fx:id="LabelCC" layoutX="59.0" layoutY="80.0" prefHeight="26.0" prefWidth="170.0" />
-   </children>
-</AnchorPane>
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.control.Premier1control">
+   <top>
+      <Label text="INDOVINA NUMERO" BorderPane.alignment="CENTER" />
+   </top>
+   <center>
+      <VBox prefHeight="150.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="zone_nuova_partita" prefHeight="30.0" prefWidth="111.0">
+               <children>
+                  <Button fx:id="Btn_nuova_partita" mnemonicParsing="false" onAction="#handler_Btn_nuova_partita" text="Nuova partita">
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                  </Button>
+                  <TextField fx:id="Txf_contattore_fatto" prefHeight="30.0" prefWidth="70.0">
+                     <HBox.margin>
+                        <Insets left="25.0" right="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="/" />
+                  <TextField fx:id="Txf_contattore_max" prefHeight="30.0" prefWidth="67.0">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox fx:id="zona_inserire_numero" prefHeight="46.0" prefWidth="400.0">
+               <children>
+                  <Button fx:id="Btn_invio" mnemonicParsing="false" onAction="#handler_Btn_invio" text="INVIO">
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                  </Button>
+                  <TextField fx:id="Txf_numero_indovinato">
+                     <HBox.margin>
+                        <Insets left="65.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <TextArea fx:id="TxA_messagio" prefHeight="116.0" prefWidth="400.0" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
